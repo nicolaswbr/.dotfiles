@@ -12,6 +12,8 @@ Configuration of my Mac, versioned. Files live in this repo and are symlinked in
 
 Never commit secrets here: no SSH keys, no tokens, no `~/.claude.json`.
 
+VSCode keyboard shortcuts and useful commands (in French): [vscode/CHEATSHEET.md](vscode/CHEATSHEET.md).
+
 ## Bootstrap a new Mac
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
