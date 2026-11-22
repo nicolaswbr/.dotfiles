@@ -2,14 +2,12 @@
     // Claude Code
     "claudeCode.preferredLocation": "panel",
     "claudeCode.hideOnboarding": true,
-
     // Theme: follows macOS appearance (dark/light)
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-    "workbench.preferredLightColorTheme": "Catppuccin Latte",
+    "workbench.preferredLightColorTheme": "Catppuccin Macchiato",
     // Icon themes can't follow the appearance: one flavor for both
-    "workbench.iconTheme": "catppuccin-latte",
-
+    "workbench.iconTheme": "catppuccin-mocha",
     // Editor
     "editor.formatOnSave": true,
     "editor.stickyScroll.enabled": true,
@@ -18,7 +16,6 @@
     "editor.linkedEditing": true,
     "editor.renderWhitespace": "trailing",
     "workbench.editor.highlightModifiedTabs": true,
-
     // Files
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
@@ -28,7 +25,6 @@
         // Trailing double space is a line break in Markdown
         "files.trimTrailingWhitespace": false
     },
-
     // Search & file watching: skip generated folders
     "search.exclude": {
         "**/.terraform": true,
@@ -41,13 +37,12 @@
         "**/.dart_tool/**": true,
         "**/build/**": true
     },
-
     // Git
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.pruneOnFetch": true,
-
     // Terminal
     "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.scrollback": 10000
+    "terminal.integrated.scrollback": 10000,
+    "workbench.colorTheme": "Catppuccin Frappé"
 }
