@@ -10,6 +10,7 @@ set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VSCODE_USER="$HOME/Library/Application Support/Code/User"
+ITERM_DYNAMIC="$HOME/Library/Application Support/iTerm2/DynamicProfiles"
 
 link() {
   local src="$DOTFILES/$1" dst="$2"
@@ -39,6 +40,7 @@ link git/.gitignore_global   "$HOME/.gitignore_global"
 link vscode/settings.json    "$VSCODE_USER/settings.json"
 link vscode/keybindings.json "$VSCODE_USER/keybindings.json"
 link claude/settings.json    "$HOME/.claude/settings.json"
+link iterm2/catppuccin.json  "$ITERM_DYNAMIC/catppuccin.json"
 
 if [ "${1:-}" = "--brew" ]; then
   brew bundle --file "$DOTFILES/Brewfile"

@@ -8,6 +8,7 @@ Configuration of my Mac, versioned. Files live in this repo and are symlinked in
 | `git/`    | `.gitconfig`, `.gitignore_global`          | `~/`                                             |
 | `vscode/` | `settings.json`, `keybindings.json`        | `~/Library/Application Support/Code/User/`       |
 | `claude/` | Claude Code `settings.json`                | `~/.claude/`                                     |
+| `iterm2/` | Catppuccin profile (Frappé light, Mocha dark) | `~/Library/Application Support/iTerm2/DynamicProfiles/` |
 | `Brewfile`| CLI tools, apps and VSCode extensions      | installed with `brew bundle`                     |
 
 Never commit secrets here: no SSH keys, no tokens, no `~/.claude.json`.
