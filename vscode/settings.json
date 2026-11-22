@@ -7,6 +7,8 @@
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
     "workbench.preferredLightColorTheme": "Catppuccin Latte",
+    // Icon themes can't follow the appearance: one flavor for both
+    "workbench.iconTheme": "catppuccin-latte",
 
     // Editor
     "editor.formatOnSave": true,

@@ -27,6 +27,7 @@ cask "copilot-cli"
 ## VSCode extensions
 vscode "anthropic.claude-code"
 vscode "catppuccin.catppuccin-vsc"
+vscode "catppuccin.catppuccin-vsc-icons"
 # Recommended, uncomment to install
 # vscode "usernamehw.errorlens"                         # Errors shown inline
 # vscode "EditorConfig.EditorConfig"
