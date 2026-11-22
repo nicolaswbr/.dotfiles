@@ -1,0 +1,23 @@
+[user]
+	name = Nicolas Weber
+	email = 57920921+Triticumdico@users.noreply.github.com
+[init]
+	defaultBranch = main
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore_global
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[merge]
+	conflictstyle = zdiff3
+[rerere]
+	enabled = true
