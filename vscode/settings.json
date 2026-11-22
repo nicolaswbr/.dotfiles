@@ -1,0 +1,46 @@
+{
+    // Claude Code
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.hideOnboarding": true,
+
+    // Editor
+    "editor.formatOnSave": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": false,
+    "editor.linkedEditing": true,
+    "editor.renderWhitespace": "trailing",
+    "workbench.editor.highlightModifiedTabs": true,
+
+    // Files
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "[markdown]": {
+        // Trailing double space is a line break in Markdown
+        "files.trimTrailingWhitespace": false
+    },
+
+    // Search & file watching: skip generated folders
+    "search.exclude": {
+        "**/.terraform": true,
+        "**/.terragrunt-cache": true,
+        "**/.dart_tool": true
+    },
+    "files.watcherExclude": {
+        "**/.terraform/**": true,
+        "**/.terragrunt-cache/**": true,
+        "**/.dart_tool/**": true,
+        "**/build/**": true
+    },
+
+    // Git
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.pruneOnFetch": true,
+
+    // Terminal
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.scrollback": 10000
+}
