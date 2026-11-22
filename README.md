@@ -31,7 +31,7 @@ VSCode keyboard shortcuts and useful commands (in French): [vscode/CHEATSHEET.md
 3. Clone the repo, link the files and install the Brewfile.
 
    ```zsh
-   git clone https://github.com/Triticumdico/.dotfiles.git ~/.dotfiles
+   git clone https://github.com/nicolaswbr/.dotfiles.git ~/.dotfiles
    ~/.dotfiles/install.sh --brew
    ```
 
