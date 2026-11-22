@@ -3,6 +3,11 @@
     "claudeCode.preferredLocation": "panel",
     "claudeCode.hideOnboarding": true,
 
+    // Theme: follows macOS appearance (dark/light)
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "workbench.preferredLightColorTheme": "Catppuccin Latte",
+
     // Editor
     "editor.formatOnSave": true,
     "editor.stickyScroll.enabled": true,
