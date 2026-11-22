@@ -1,45 +1,55 @@
 # .dotfiles
 
-## Steps to bootstrap a new Mac
+Configuration of my Mac, versioned. Files live in this repo and are symlinked into place by `install.sh`.
+
+| Folder    | Contents                                   | Linked to                                        |
+|-----------|--------------------------------------------|--------------------------------------------------|
+| `zsh/`    | `.zshrc`, `.zprofile`                      | `~/`                                             |
+| `git/`    | `.gitconfig`, `.gitignore_global`          | `~/`                                             |
+| `vscode/` | `settings.json`, `keybindings.json`        | `~/Library/Application Support/Code/User/`       |
+| `claude/` | Claude Code `settings.json`                | `~/.claude/`                                     |
+| `Brewfile`| CLI tools, apps and VSCode extensions      | installed with `brew bundle`                     |
+
+Never commit secrets here: no SSH keys, no tokens, no `~/.claude.json`.
+
+## Bootstrap a new Mac
 
 1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
 
-```zsh
-xcode-select --install
-```
+   ```zsh
+   xcode-select --install
+   ```
 
-2. Clone repo into new hidden directory.
+2. Install [Homebrew](https://brew.sh).
 
-```zsh
-# Use SSH (if set up)...
-git clone git@github.com:Triticumdico/.dotfiles.git ~/.dotfiles
+   ```zsh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
-# ...or use HTTPS and switch remotes later.
-git clone https://github.com/Triticumdico/.dotfiles.git ~/.dotfiles
-```
+3. Clone the repo, link the files and install the Brewfile.
 
-3. Create symlinks in the Home directory to the real files in the repo.
+   ```zsh
+   git clone https://github.com/Triticumdico/.dotfiles.git ~/.dotfiles
+   ~/.dotfiles/install.sh --brew
+   ```
 
-```zsh
-# There are better and less manual ways to do this;
-# investigate install scripts and bootstrapping tools.
+## Day to day
 
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-```
-
-4. Install Homebrew, followed by the software listed in the Brewfile.
+Edit the files in place (`~/.zshrc`, VSCode settings, ...): they are symlinks, so changes land in this repo. Then commit.
 
 ```zsh
-# These could also be in an install script.
-
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Then pass in the Brewfile location...
-brew bundle --file ~/.dotfiles/Brewfile
-
-# ...or move to the directory first.
-cd ~/.dotfiles && brew bundle
+cd ~/.dotfiles && git status
 ```
 
+Keep the Brewfile in sync with the machine:
 
+```zsh
+brew bundle check   --file ~/.dotfiles/Brewfile   # what's listed but not installed
+brew bundle cleanup --file ~/.dotfiles/Brewfile   # what's installed but not listed (dry run)
+```
+
+Apps installed outside Homebrew (e.g. VSCode, iTerm2 downloaded from the web) make `brew bundle` fail on their cask. Hand them over to Homebrew once with:
+
+```zsh
+brew install --cask --adopt visual-studio-code iterm2
+```
